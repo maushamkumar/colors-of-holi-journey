@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                holi: {
+                    pink: '#FF5678',
+                    yellow: '#FFDE59',
+                    blue: '#58AEF7',
+                    purple: '#A66FED',
+                    green: '#4CD97B'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +92,57 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' }
+                },
+                'float-reverse': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(10px)' }
+                },
+                'pulse-gentle': {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' }
+                },
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' }
+                },
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' }
+                },
+                'slide-in-right': {
+                    '0%': { transform: 'translateX(100%)', opacity: '0' },
+                    '100%': { transform: 'translateX(0)', opacity: '1' }
+                },
+                'slide-in-left': {
+                    '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                    '100%': { transform: 'translateX(0)', opacity: '1' }
+                },
+                'color-particle': {
+                    '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: '0' },
+                    '50%': { opacity: '1' },
+                    '100%': { transform: 'translate(var(--translate-x, 100px), var(--translate-y, 100px)) rotate(var(--rotate, 90deg))', opacity: '0' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 6s ease-in-out infinite',
+                'float-reverse': 'float-reverse 7s ease-in-out infinite',
+                'pulse-gentle': 'pulse-gentle 4s ease-in-out infinite',
+                'fade-in-up': 'fade-in-up 0.8s ease-out',
+                'fade-in': 'fade-in 0.6s ease-out',
+                'slide-in-right': 'slide-in-right 0.5s ease-out',
+                'slide-in-left': 'slide-in-left 0.5s ease-out',
+                'color-particle': 'color-particle 8s ease-out forwards'
+			},
+            fontFamily: {
+                'sans': ['SF Pro Display', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                'serif': ['Playfair Display', 'serif']
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
