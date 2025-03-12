@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface GalleryImage {
   src: string;
@@ -71,9 +71,9 @@ const Gallery: React.FC = () => {
         </div>
         
         <div className="mt-10 text-center">
-          <a href="#" className="button-secondary">
+          <Link to="/gallery" className="button-secondary">
             View All Photos
-          </a>
+          </Link>
         </div>
       </div>
       
